@@ -1,0 +1,1 @@
+@include('partials.tabs.tab-files', ['module_name' => 'issue', 'module_id' => $issue->id])

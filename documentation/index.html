@@ -1,0 +1,568 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>NextPM - Open Source Project Management Script</title>
+        <meta name="description" content="NextPM is a powerful yet simple project management tool that helps a team to improve collaboration, visibility, accountability, and ultimately results. Users can plan projects and milestones, collaborate about work with context, deliver results faster, and report accurately. With Projects, users can assign tasks easily, communicate effectively, be informed on all project updates, get detailed reports on work progress and deliver projects on time, every time.">
+        <link rel="shortcut icon" href="assets/img/favicon.png">
+        <meta name="author" content="Muhammad Jaber">
+        <meta name="copyright" content="Muhammad Jaber">
+        <meta name="generator" content="Documenter v2.0 https://evp.to/documenter">
+        <meta name="date" content="2021-01-05T00:00:00+01:00">
+        <link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+        <link rel="stylesheet" href="assets/css/custom.css" media="all">
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/jquery.scrollTo.js"></script>
+        <script src="assets/js/jquery.easing.js"></script>
+        <script>document.createElement('section');var duration='500',easing='swing';</script>
+        <script src="assets/js/script.js"></script>
+        <style>
+            html{background-color:#FFFFFF;color:#383838;}
+            ::-moz-selection{background:#444444;color:#DDDDDD;}
+            ::selection{background:#444444;color:#DDDDDD;}
+            #documenter_sidebar #documenter_logo{background-image:url(assets/img/logo.png);}
+            a{color:#0000FF;}
+            .btn {
+            border-radius:3px;
+            }
+            .btn-primary {
+            background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+            background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+            background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#DDDDDD), to(#0044CC));
+            background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+            background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+            background-image: linear-gradient(top, #0088CC, #0044CC);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+            border-color: #0044CC #0044CC #bfbfbf;
+            color:#FFFFFF;
+            }
+            .btn-primary:hover,
+            .btn-primary:active,
+            .btn-primary.active,
+            .btn-primary.disabled,
+            .btn-primary[disabled] {
+            border-color: #0088CC #0088CC #bfbfbf;
+            background-color: #0044CC;
+            }
+            hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+            #documenter_sidebar, #documenter_sidebar ul a{background-color:#DDDDDD;color:#222222;}
+            #documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+            #documenter_sidebar ul{border-top:1px solid #AAAAAA;}
+            #documenter_sidebar ul a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+            #documenter_sidebar ul a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+            #documenter_sidebar ul a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+            #documenter_copyright{display:block !important;visibility:visible !important;}
+            .star-list li li, .box-list li li, .disclosure-close li li, .diamond-list li li{list-style: disc !important;}
+            .star-list li, .box-list li, .diamond-list li, .disclosure-close li, .box-list .diamond-list li, .box-list .disclosure-close li{list-style: none !important;}
+            .star-list li:before{content:"\2756";margin-right:3px;}
+            .box-list li:before{content:"\2752";margin-right:3px;color:#000;}
+            .disclosure-close li:before{content: "\27A4"!important;margin-right: 3px;color: #000;}
+            .diamond-list li:before{content: "\2756"!important;margin-right: 3px;color: #000;}
+            .star-list li li:before, .box-list li li:before, .diamond-list li li:before, .disclosure-close li li:before{content:none;}
+            .para-hyphen{margin-left: 36px; margin-bottom: 10px;}
+            .para-hyphen:before{content: "\268A";margin-right: 3px;color: #000;font-size: 11px;}
+            .sub {display: inline-block; margin-left: 15px;}
+        </style>
+    </head>
+    <body class="documenter-project-nextpm">
+        <div id="documenter_sidebar">
+            <a href="#documenter_cover" id="documenter_logo"></a>
+            <ul id="documenter_nav">
+                <li><a class="current" href="#documenter_cover">Start</a></li>
+                <li><a href="#installation" title="Installation">Installation</a></li>
+                <li><a href="#source_code" title="Source Code">Source Code</a></li>
+                <li><a href="#features" title="Features">Features</a></li>
+                <li><a href="#projects" title="Projects">Projects</a></li>
+                <li><a href="#tasks" title="Tasks">Tasks</a></li>
+                <li><a href="#issues" title="Issues">Issues</a></li>
+                <li><a href="#calendar" title="Calendar">Calendar</a></li>
+                <li><a href="#administration" title="Administration">Administration</a></li>
+                <li><a href="#users_and_roles" title="Users and Roles">Users and Roles</a></li>
+                <li><a href="#messaging" title="Messaging">Messaging</a></li>
+                <li><a href="#notes" title="Notes">Notes</a></li>
+                <li><a href="#history" title="History">History</a></li>
+            </ul>
+            <div id="documenter_copyright">Copyright Muhammad Jaber 2022<br>
+                made with the <a href="https://evp.to/documenter">Documenter v2.0</a>
+            </div>
+        </div>
+        <div id="documenter_content">
+            <section id="documenter_cover">
+                <img class="img-border" src="assets/img/banner.jpg" alt="NextPM" style="max-width:700px;padding:4px;border:1px solid #f2f2f2;background:#fff;margin-left: -5px;">
+                <h1 style="margin-bottom: 5px">NextPM</h1>
+                <h2 style="font-size: 18px">Open Source Project Management Script</h2>
+                <hr>
+                <ul>
+                    <li>Created: 7/8/2022</li>
+                    <li>Latest update: 7/8/2022</li>
+                    <li>Author: Muhammad Jaber</li>
+                    <li>Email: <a href="mailto:mdjaber.swe@gmail.com">mdjaber.swe@gmail.com</a></li>
+                </ul>
+                <p>
+                    NextPM is a powerful yet simple project management tool that helps a team to improve collaboration, visibility, accountability, and ultimately results. Users can plan projects and milestones, collaborate about work with context, deliver results faster, and report accurately. With Projects, users can assign tasks easily, communicate effectively, be informed on all project updates, get detailed reports on work progress and deliver projects on time, every time.
+                </p>
+            </section>
+            <section id="installation">
+                <div class="page-header">
+                    <h3>Installation</h3>
+                    <hr class="notop">
+                </div>
+                <span class="para-title">Before install make sure you have the proper server requirements</span>
+                <pre style="max-width: 700px; box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 20px; line-height: 1.42857; word-break: break-all; word-wrap: break-word; background-color: rgb(245, 245, 245); border-color: rgb(204, 204, 204); border-radius: 4px;"><code style="box-sizing: border-box; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: inherit; padding: 0px; color: inherit; background-color: transparent; border-radius: 0px; white-space: pre-wrap;">PHP 7.0.0 or higher <span style="font-size: 11px; opacity: 0.5">[PHP 7.0 or 7.1 recommeded for good performance]</span>
+MySQL 5.1+
+MySQLi Extension
+OpenSSL PHP Extension
+Mbstring PHP Extension
+PDO PHP Extension
+Tokenizer PHP Extension
+PHP Zip Archive
+IMAP Extension
+PHP GD Library
+PHP Fileinfo extension
+PHP CURL extension
+</code></pre>
+                <span class="para-title">File and folder permissions</span>
+                <pre style="max-width: 700px; box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 20px; line-height: 1.42857; word-break: break-all; word-wrap: break-word; background-color: rgb(245, 245, 245); border-color: rgb(204, 204, 204); border-radius: 4px;">
+<code style="box-sizing: border-box; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: inherit; padding: 0px; color: inherit; background-color: transparent; border-radius: 0px; white-space: pre-wrap;">[/storage/app]         775
+[/storage/framework]   775
+[/storage/logs]        775
+[/bootstrap/cache]     775
+[/public/uploads]      775
+</code></pre>
+                <span class="para-title">Installation Manual</span>
+                <ul>
+                    <li style="margin: 0px 0px 0px 36px; padding: 2px 0px; border: 0px; outline: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
+                        <b>Download</b> the <code class="success-para-box">nextpm.zip</code> package from Github.
+                    </li>
+                    <li style="margin: 0px 0px 0px 36px; padding: 2px 0px; border: 0px; outline: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
+                        <b>Upload</b> it to your server.
+                    </li>
+                    <li style="margin: 0px 0px 0px 36px; padding: 2px 0px; border: 0px; outline: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
+                        <b>Extract</b> the package (Check proper <b>File and folder permissions</b>).
+                    </li>
+                    <li style="margin: 0px 0px 0px 36px; padding: 2px 0px; border: 0px; outline: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
+                        It is important to change the domain's or subdomain's document root to the <code class="danger-para-box">public</code> folder of <code class="danger-para-box">nextpm</code>.
+                    </li>
+                    <li style="margin: 0px 0px 0px 36px; padding: 2px 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
+                        Create a MySQL database for <b>NextPM</b> on your host and remember the following information:
+                        <ul style="margin: 10px 0;">
+                            <li style="margin: 0px 0px 0px 36px; padding: 2px 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
+                                Database Name
+                            </li>
+                            <li style="margin: 0px 0px 0px 36px; padding: 2px 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
+                                Database Username
+                            </li>
+                            <li style="margin: 0px 0px 0px 36px; padding: 2px 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
+                                Database Password
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="margin: 0px 0px 0px 36px; padding: 2px 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
+                        Now you can access NextPM at:
+                        <code class="danger-para-box">http://yourdomain.com </code>&nbsp;or&nbsp;
+                        <code class="danger-para-box">http://subdomain.yourdomain.com</code>
+                    </li>
+                    <li style="margin: 0px 0px 0px 36px; padding: 2px 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
+                        Follow the web installation wizard and you will get <b>NextPM</b> installed on your host.
+                    </li>
+                </ul>
+                <span class="para-title">Configuration wizard</span>
+                <p>Once you have successfully got NextPM up and running, you can go through the configuration wizard to set up it on your server.</p>
+                <ul>
+                    <li>
+                        <p>First of all, NextPM will check if there is any library missing on the server and will remind you to install it.
+                            <br>
+                            <img class="img-border" alt="System Compatibility" src="assets/img/install_1.png"  title="System Compatibility"/>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Once all the dependencies are installed, the second step helps you to configure web app information.
+                            <br>You need to set the purchase code and system email in the step.
+                            <br>The information can be changed later on in the Administration settings.
+                            <br>
+                            <img class="img-border" alt="System Configuration" src="assets/img/install_2.png"  title="System Configuration"/>
+                        </p>
+                    </li>
+                    <li>
+                        At this step, you need to fill in the database credentials for NextPM to connect to.
+                        <br>When you are done adding or editing information on the page, click the "Save" button to continue.
+                        <br>This database settings information can later be edited in the [app_root]/.env file.
+                        <br>
+                        <img class="img-border" alt="Database setting" src="assets/img/install_3.png"  title="Database setting"/>
+                    </li>
+                    <li>
+                        <p>Once the database connection is established, NextPM will initialize the database with the default settings as well as create the default administrator.
+                            <br>
+                            <img class="img-border" alt="Init database" src="assets/img/install_4.png"  title="Init database"/>
+                            <br><br>Importing ...<br>
+                            <img class="img-border" alt="Import database" src="assets/img/install_5.png"  title="Import database"/>
+                        </p>
+                    </li>
+                    <li>
+                        <p>And after everything is completed, you are all set to go with NextPM.
+                            <br>
+                            <img class="img-border" alt="Complete Setup" src="assets/img/install_complete.png"  title="Complete Setup"/>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section id="source_code">
+                <div class="page-header">
+                    <h3>Source Code</h3>
+                    <hr class="notop">
+                </div>
+
+                <p>The application is developed in Laravel framework and completely follows MVC.</p>
+                <p>The root directory contains</p>
+                <ul class="box-list">
+                    <li>App<br>
+                        <p><span class="sub">The app directory holds the base code of the application. It comprises various sub folders as explained below :</span></p>
+                        <div class="para-hyphen">Console<br>
+                            <span class="sub">The console directory includes the artisan commands necessary for the application.</span>
+                        </div>
+                        <div class="para-hyphen">Events<br>
+                            <span class="sub">The Events directory holds event files that the application may pop up. The default file included is event.php where all the basic events are declared.</span>
+                        </div>
+                        <div class="para-hyphen">Exceptions<br>
+                            <span class="sub">This folder contains all the methods needed to handle exceptions. It also contains the file handle.php that handles all the exceptions.</span>
+                        </div>
+                        <div class="para-hyphen">Http<br>
+                            <span class="sub">The Http directory holds different filters, requests, and controllers.</span>
+                            <ul>
+                                <li>Composers</li>
+                                <li>Controllers<br>
+                                    <ul class="disclosure-close">
+                                        <li>Admin
+                                            <ul class="diamond-list">
+                                                <li>AdminBaseController.php</li>
+                                                <li>AdminDashboardController.php</li>
+                                                <li>AdminEventController.php</li>
+                                                <li>AdminFileController.php</li>
+                                                <li>AdminHistoryController.php</li>
+                                                <li>AdminImportController.php</li>
+                                                <li>AdminIssueController.php</li>
+                                                <li>AdminIssueStatusController.php</li>
+                                                <li>AdminIssueTypeController.php</li>
+                                                <li>AdminMessageController.php</li>
+                                                <li>AdminMilestoneController.php</li>
+                                                <li>AdminNoteController.php</li>
+                                                <li>AdminNotificationController.php</li>
+                                                <li>AdminProjectController.php</li>
+                                                <li>AdminProjectStatusController.php</li>
+                                                <li>AdminRoleController.php</li>
+                                                <li>AdminSettingController.php</li>
+                                                <li>AdminTaskController.php</li>
+                                                <li>AdminTaskStatusController.php</li>
+                                                <li>AdminUserController.php</li>
+                                            </ul>
+                                        </li>
+                                        <li>Auth
+                                            <ul class="diamond-list">
+                                                <li>AuthController.php</li>
+                                                <li>PasswordController.php</li>
+                                            </ul>
+                                        </li>
+                                        <li>Controller.php</li>
+                                        <li>ErrorController.php</li>
+                                        <li>HomeController.php</li>
+                                        <li>InstallController.php</li>
+                                        <li>LicenseController.php</li>
+                                    </ul>
+                                </li>
+                                <li>Middleware</li>
+                                <li>Requests</li>
+                                <li>Kernel.php</li>
+                                <li>routes.php</li>
+                            </ul>
+                        </div>
+                        <div class="para-hyphen">Jobs<br>
+                            <span class="sub">The Jobs directory holds all lineup jobs in this directory. The base class is shared among all the Jobs and provides a central location to place them under one roof.</span>
+                        </div>
+                        <div class="para-hyphen">Library</div>
+                        <div class="para-hyphen">Listeners<br>
+                            <span class="sub">Listeners are event-dependent and they include methods which are used to handle events and exceptions.</span>
+                        </div>
+                        <div class="para-hyphen">Models
+                            <ul class="diamond-list">
+                                <li>AllowedStaff.php</li>
+                                <li>AttachFile.php</li>
+                                <li>BaseModel.php</li>
+                                <li>ChatReceiver.php</li>
+                                <li>ChatRoom.php</li>
+                                <li>ChatRoomMember.php</li>
+                                <li>ChatSender.php</li>
+                                <li>Event.php</li>
+                                <li>EventAttendee.php</li>
+                                <li>FilterView.php</li>
+                                <li>Follower.php</li>
+                                <li>Import.php</li>
+                                <li>Issue.php</li>
+                                <li>IssueStatus.php</li>
+                                <li>IssueType.php</li>
+                                <li>Milestone.php</li>
+                                <li>Note.php</li>
+                                <li>NoteInfo.php</li>
+                                <li>Permission.php</li>
+                                <li>Project.php</li>
+                                <li>ProjectStatus.php</li>
+                                <li>Revision.php</li>
+                                <li>Role.php</li>
+                                <li>Setting.php</li>
+                                <li>SocialMedia.php</li>
+                                <li>Staff.php</li>
+                                <li>Task.php</li>
+                                <li>TaskStatus.php</li>
+                                <li>User.php</li>
+                            </ul>
+                        </div>
+                        <div class="para-hyphen">Notifications<br>
+                            <span class="sub">The Notifications directory contains all notifications sent through the application.</span>
+                        </div>
+                        <div class="para-hyphen">Policies<br>
+                            <span class="sub">The policies directory holds different policies for the application.</span>
+                        </div>
+                        <div class="para-hyphen">Providers<br>
+                            <span class="sub">The Providers directory is used for containing different service providers.</span>
+                        </div>
+                    </li>
+                    <li>Bootstrap<br>
+                        <p><span class="sub">The bootstrap directory contains all the bootstrapping scripts used for the application.</span></p>
+                    </li>
+                    <li>Config<br>
+                        <p><span class="sub">The config directory holds all configuration files (.config).</span></p>
+                    </li>
+                    <li>Database<br>
+                        <p><span class="sub">The database directory holds all database files.</span></p>
+                    </li>
+                    <li>Public<br>
+                        <p><span class="sub">The public directory helps to start the application and maintains other necessary files such as JavaScript, CSS, and images.</span></p>
+                    </li>
+                    <li>Resources<br>
+                        <p><span class="sub">The resources directory holds all the Sass files, language (localization) files, templates.</span></p>
+                        <ul>
+                            <div class="para-hyphen">
+                                assets<br>
+                                <p><span class="sub">The assets folder include files such as LESS and SCSS, that are required for styling the application.</span></p>
+                            </div>
+                            <div class="para-hyphen">
+                                lang<br>
+                                <p><span class="sub">This folder includes configuration for localization or internalization.</span></p>
+                            </div>
+                            <div class="para-hyphen">views<br>
+                                <p><span class="sub">Views are the HTML files or templates which interact with end users.</p>
+                                <ul>
+                                    <li>admin</li>
+                                    <li>auth</li>
+                                    <li>emails</li>
+                                    <li>errors</li>
+                                    <li>install</li>
+                                    <li>layouts</li>
+                                    <li>partials</li>
+                                    <li>templates</li>
+                                    <li>vendor</li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>Storage<br>
+                        <p><span class="sub">The storage directory holds all session files, cache, compiled templates as well as miscellaneous files generated by the framework.</span></p>
+                    </li>
+                    <li>Tests<br>
+                        <p><span class="sub">The test directory holds all test cases.</span></p>
+                    </li>
+                    <li>Vendor<br>
+                        <p><span class="sub">The vendor directory holds all composer dependency files.</span></p>
+                    </li>
+                </ul>
+            </section>
+            <section id="features">
+                <div class="page-header">
+                    <h3>Features</h3>
+                    <hr class="notop">
+                </div>
+                <ul>
+                    <li>Project management</li>
+                    <li>Project administration</li>
+                    <li>Project reports</li>
+                    <li>Task management</li>
+                    <li>Milestone tracking</li>
+                    <li>Issue tracking</li>
+                    <li>Gantt charts</li>
+                    <li>Event calendar</li>
+                    <li>Tabular, kanban and calendar View</li>
+                    <li>Filtered views</li>
+                    <li>Followers</li>
+                    <li>Record owner</li>
+                    <li>Notes</li>
+                    <li>File management</li>
+                    <li>Histories</li>
+                    <li>Data import/export</li>
+                    <li>Mass updates</li>
+                    <li>Dashboard</li>
+                    <li>Charts and reports</li>
+                    <li>Role based permissions</li>
+                    <li>Access control</li>
+                    <li>Messaging or instant messaging</li>
+                    <li>Announcement</li>
+                    <li>Realtime notifications</li>
+                    <li>And more...</li>
+                </ul>
+            </section>
+            <section id="projects">
+                <div class="page-header">
+                    <h3>Projects</h3>
+                    <hr class="notop">
+                </div>
+                <p>
+                    The Project Module has two basic views tabular and kanban. The tabular view shows a list of all the projects along with their attributes like the owner, percent completion, end date, etc. Project's kanban view where you can modify project status by drag and drop. When you set up a project, you can mark specific points along its timeline, called milestones. Under each milestone, there are tasks that you can assign to different users on your team. Within each project, you have access to a Gantt chart and report page where you can view the status of your team, as well as the progress made on various milestones, tasks, and issues.
+                </p>
+                <h5 class="para-title">Project List</h5>
+                <p><img class="img-border plain lg" alt="project-list" src="assets/img/project_list.png"  title="Project list"/></p>
+                <h5 class="para-title">Project Kanban</h5>
+                <p><img class="img-border plain lg" alt="project-kanban" src="assets/img/project_kanban.png"  title="Project kanban"/></p>
+                <h5 class="para-title">Project Single Page</h5>
+                <p><img class="img-border plain lg" alt="project-overview" src="assets/img/project_overview.png"  title="Project overview"/></p>
+            </section>
+            <section id="tasks">
+                <div class="page-header">
+                    <h3>Tasks</h3>
+                    <hr class="notop">
+                </div>
+                <p>
+                    Task has three basic views tabular, kanban and calendar view. The tabular view shows a list of all the tasks. Kanban is self-explanatory. You can view the tasks and a board kind of view and you can drag-and-drop tasks across statuses. There are advanced views where we've applied some of the most frequently used filters and given them here as these views you can create your custom view like this and you can also search for a view here. Apart from these, you can apply other filters here and you can save the results to a CSV file.
+                </p>
+                <p style="box-sizing: border-box; line-height: 25px; letter-spacing: 0.3px; margin: 0px; padding: 0px 0px 5px;">
+                    <span class="para-title">Task tabular list page</span>
+                </p>
+                <p><img class="img-border plain lg" alt="task-list" src="assets/img/task_list.png"  title="Task list"/></p>
+                <p style="box-sizing: border-box; line-height: 25px; letter-spacing: 0.3px; margin: 0px; padding: 0px 0px 5px;">
+                    <span class="para-title">Task kanban page</span>
+                </p>
+                <p><img class="img-border plain lg" alt="task-kanban" src="assets/img/task_kanban.png"  title="Task kanban"/></p>
+                <p style="box-sizing: border-box; line-height: 25px; letter-spacing: 0.3px; margin: 0px; padding: 0px 0px 5px;">
+                    <span class="para-title">Task single show page</span>
+                </p>
+                <p><img class="img-border plain lg" alt="task-overview" src="assets/img/task_overview.png"  title="Task overview"/></p>
+            </section>
+            <section id="issues">
+                <div class="page-header">
+                    <h3>Issues</h3>
+                    <hr class="notop">
+                </div>
+                <p>
+                    Similar to Task Module, the Issue Module has three basic views tabular, kanban and calendar view. The tabular view shows a list of all the issues along with their attributes like owner, status, severity, etc.
+                    We have provided a set of pre-defined views that you might need frequently. You can also apply filter and view their results as well.
+                    We have the kanban view where you can modify issue status by drag and drop.
+                </p>
+                <p style="box-sizing: border-box; line-height: 25px; letter-spacing: 0.3px; margin: 0px; padding: 0px 0px 5px;">
+                    <span class="para-title">Issue tabular list page</span>
+                </p>
+                <p><img class="img-border plain lg" alt="issue-list" src="assets/img/issue_list.png"  title="Issue list"/></p>
+                <p style="box-sizing: border-box; line-height: 25px; letter-spacing: 0.3px; margin: 0px; padding: 0px 0px 5px;">
+                    <span class="para-title">Issue kanban page</span>
+                </p>
+                <p><img class="img-border plain lg" alt="issue-kanban" src="assets/img/issue_kanban.png"  title="Issue kanban"/></p>
+                <p style="box-sizing: border-box; line-height: 25px; letter-spacing: 0.3px; margin: 0px; padding: 0px 0px 5px;">
+                    <span class="para-title">Issue single show page</span>
+                </p>
+                <p><img class="img-border plain lg" alt="issue-overview" src="assets/img/issue_overview.png"  title="Issue overview"/></p>
+            </section>
+            <section id="calendar">
+                <div class="page-header">
+                    <h3>Calendar</h3>
+                    <hr class="notop">
+                </div>
+                <p>
+                    Calendar feature is managing your tasks, issues and events effectively.<br>
+                    It's fast and customizable to track your events, tasks, issues.<br>
+                    It's easy to add new tasks or issues.<br>
+                    It's quick to edit and complete your task or issue.
+                </p>
+                <p><img class="img-border plain lg" alt="calendar" src="assets/img/calendar.png" title="Calendar"/></p>
+            </section>
+            <section id="administration">
+                <div class="page-header">
+                    <h3>Administration</h3>
+                    <hr class="notop">
+                </div>
+                <p>
+                    All configurations specific to an application can be configured from the Settings page. Segregated into different sections, each setting facilitates enhancing the aspects of its area. To navigate to the Settings page click on the "Administration" option displayed on the left sidebar.
+                </p>
+                <span class="para-title">General Settings</span>
+                <p style="margin: 0 0 10px 0">View and edit settings like application name, logo, favicon, timezone, and other general aspects. You will be able to define the basic level settings of your application.</p>
+                <p><img class="img-border plain lg" alt="setting-general" src="assets/img/setting_general.png"  title="General settings"/></p>
+                <span class="para-title">Email Settings</span>
+                <p style="margin: 0 0 10px 0">View and edit settings like system from email, name, default mailer PHP mail() or SMTP. If the default mailer is SMTP then settings hostname, username, password, port, encryption, etc.</p>
+                <p><img class="img-border plain lg" alt="setting-email" src="assets/img/setting_email.png"  title="Email settings"/></p>
+                <span class="para-title">Custom Dropdowns</span>
+                <p style="margin: 0 0 10px 0">
+                    When working in NextPM you come across various statuses & dropdowns, such as task status, issue status, project status, etc. You can configure statuses & dropdowns in the Selection Lists section.
+                    Click Administration > Custom Dropdowns. <br>
+                    Here you can add new statuses/stages/types, delete those you don't need, edit statuses/stages/types names, or category. Also, you can change the order of statuses/stages/types. Just drag and drop statuses/stages to do that.
+                </p>
+                <p><img class="img-border plain lg" alt="custom-dropdown" src="assets/img/custom_dropdown.png"  title="Custom dropdown"/></p>
+            </section>
+            <section id="users_and_roles">
+                <div class="page-header">
+                    <h3>Users and Roles</h3>
+                    <hr class="notop">
+                </div>
+                <p>
+                    If you need to add a new user in NextPM then click "Add User" and put in all the user details and role and hit save.
+                    <br>In a user single show page, you will see the user-owned/related projects, tasks, milestones, etc.
+                </p>
+                <p><img class="img-border plain lg" alt="add-user" src="assets/img/add_user.png"  title="Add user"/></p>
+                <h5 class="para-title">User single show page</h5>
+                <p><img class="img-border plain lg" alt="user-overview" src="assets/img/user_overview.png"  title="User overview"/></p>
+                <p>
+                    Each person on a team has a different role to play within an organization and may require a unique set of permissions.
+                    <br>In addition to default roles like Administrator or Standard, NextPM allows you to create your custom role using the role feature.
+                    <br>You can set permissions for the role to view, add, edit, and delete modules.
+                </p>
+                <p><img class="img-border plain lg" alt="add-new-role" src="assets/img/add_new_role.png"  title="Add new role"/></p>
+            </section>
+            <section id="messaging">
+                <div class="page-header">
+                    <h3>Messaging</h3>
+                    <hr class="notop">
+                </div>
+                <p>
+                    The internal messenger delivers instant messages.
+                    <br>All messages are saved in history and the most recent messages appear at the top of the list.
+                    <br>The messenger interface includes a search for users, with the most recent users displayed conveniently.
+                    An online indicator is included in the message window.
+                </p>
+                <p><img class="img-border plain lg" alt="add-new-role" src="assets/img/chat.png"  title="Chat box"/></p>
+            </section>
+            <section id="notes">
+                <div class="page-header">
+                    <h3>Notes</h3>
+                    <hr class="notop">
+                </div>
+                <p>
+                    In NextPM, you can associate notes to the records by specifying the required details.
+                    You can create notes only if you have the Create permission for Notes.
+                    In the Module Details page, click the note tab and you have the existing note details, if any, are displayed.
+                    Enter the note content in the text box.
+                    Click the Attach File link if you want to upload files to the note.
+                    You can attach up to 10 files in a note and click "Save".
+                </p>
+                <p><img class="img-border plain lg" alt="note" src="assets/img/note.png"  title="Note"/></p>
+            </section>
+            <section id="history">
+                <div class="page-header">
+                    <h3>History</h3>
+                    <hr class="notop">
+                </div>
+                <p>
+                    In the NextPM when you open a record under each individual on the history tab where you can see all the changes update with regards to that record.
+                </p>
+                <p><img class="img-border plain lg" alt="history" src="assets/img/history.png"  title="History"/></p>
+            </section>
+        </div>
+    </body>
+</html>

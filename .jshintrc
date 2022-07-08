@@ -1,0 +1,12 @@
+{
+    "esversion": 6,
+
+    // Confuse user of '!'
+    "-W018": false,
+
+    // Functions declared within loops referencing an outer scoped variable may lead to confusing semantics
+    "-W083": false,
+
+    // Misleading line break before '?' readers may interpret this as an expression boundary
+    "-W014": false
+}

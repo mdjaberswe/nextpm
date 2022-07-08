@@ -1,0 +1,65 @@
+.nicescroll-rails {
+    display: block;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.nicescroll-cursors {
+    display: block;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1299px) {
+    .nicescroll-rails {
+        display: block;
+        opacity: 1;
+    }
+    .nicescroll-cursors {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .nicescroll-rails {
+        display: block;
+        opacity: 1;
+    }
+    .nicescroll-cursors {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    .nicescroll-rails {
+        display: none;
+        opacity: 0;
+    }
+    .nicescroll-cursors {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .nicescroll-rails {
+        display: none;
+        opacity: 0;
+    }
+    .nicescroll-cursors {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .nicescroll-rails {
+        display: none;
+        opacity: 0;
+    }
+    .nicescroll-cursors {
+        display: none;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,32 @@
+.ladda-label:after {
+    margin-left: 3px;
+    font-size: 14px;
+    line-height: 13px;
+    font-family: 'FontAwesome';
+}
+
+.ladda-label.success:after {
+    content: "\f058";
+}
+
+.ladda-label.error:after {
+    content: "\f06a";
+}
+
+.ladda-label[data-status="false"].success:after {
+    content: "";
+    display: none;
+}
+
+.ladda-label[data-status="false"].error:after {
+    content: "";
+    display: none;
+}
+
+.ladda-button.stand[data-style="expand-right"][data-loading] {
+    padding-right: 20px;
+}
+
+.ladda-button.stand[data-style="expand-right"] .ladda-spinner {
+    right: calc(50% - 80px);
+}

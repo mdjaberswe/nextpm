@@ -1,0 +1,72 @@
+.jemoji-menu {
+    position: absolute;
+    top: -195px;
+}
+
+.jemoji-icons {
+    height: 187px;
+    margin: 0 !important;
+    background-color: rgba(247, 247, 247, 0.975);
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 5px !important;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.375);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.375);
+}
+
+.jemoji-menu .jemoji-icons > div.active,
+.jemoji-menu .jemoji-icons > div:active,
+.jemoji-menu .jemoji-icons > div:focus,
+.jemoji-menu .jemoji-icons > div:hover {
+    background-color: #09f !important;
+}
+
+.jemoji-icons.ps .ps__rail-x,
+.jemoji-icons.ps .ps__rail-y,
+.jemoji-icons.ps .ps__rail-x:hover,
+.jemoji-icons.ps .ps__rail-y:hover,
+.jemoji-icons.ps .ps__rail-x:focus,
+.jemoji-icons.ps .ps__rail-y:focus,
+.jemoji-icons.ps .ps__rail-x.ps--clicking,
+.jemoji-icons.ps .ps__rail-y.ps--clicking {
+    margin: 0 !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.jemoji-icons.ps .ps__rail-x:hover > .ps__thumb-x,
+.jemoji-icons.ps .ps__rail-x:focus > .ps__thumb-x,
+.jemoji-icons.ps .ps__rail-x.ps--clicking .ps__thumb-x {
+    height: 6px !important;
+}
+
+.jemoji-icons.ps .ps__rail-y:hover > .ps__thumb-y,
+.jemoji-icons.ps .ps__rail-y:focus > .ps__thumb-y,
+.jemoji-icons.ps .ps__rail-y.ps--clicking .ps__thumb-y {
+    width: 6px !important;
+}
+
+.jemoji-info {
+    z-index: 5;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+}
+
+.jemoji-close:before {
+    color: #bbb;
+    font-family: 'FontAwesome';
+    content: "\f00d";
+}
+
+.jemoji-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    float: none !important;
+    width: 15px;
+    color: rgba(0, 0, 0, 0);
+}
+
+.jemoji-menu-arrow {
+    display: none;
+}

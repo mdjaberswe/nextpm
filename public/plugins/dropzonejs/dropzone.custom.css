@@ -1,0 +1,271 @@
+.dropzone {
+    min-height: 95px;
+    margin-top: 5px;
+    color: #c8c8c8;
+    border: 2px dashed #e6e6e6;
+}
+
+.dropzone .dz-default {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dz-preview-container {
+    margin: 20px 0;
+}
+
+.modalfree.dropzone-container .dz-preview-container {
+    margin: 0;
+}
+
+.modalfree.dropzone-container .dz-preview-container:not(:empty) {
+    margin: 10px 0 0 0;
+}
+
+.dz-preview-container .tooltip-inner {
+    max-width: 350px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.dz-preview {
+    position: relative;
+    float: left;
+    display: block;
+    width: 100%;
+    min-height: 26px;
+    margin: 0 0 5px 0;
+}
+
+.dz-preview .dz-image {
+    display: none;
+}
+
+.dz-preview .dz-details {
+    position: relative;
+    z-index: auto;
+    top: auto;
+    left: auto;
+    float: left;
+    width: 55%;
+    min-width: 55%;
+    max-width: 55%;
+    padding: 0;
+    color: #505050;
+    font-size: 13px;
+    text-align: left;
+    opacity: 1;
+}
+
+.modalfree.dropzone-container .dz-preview .dz-details {
+    color: #505050;
+}
+
+.dz-preview .dz-details .dz-filename span,
+.dz-preview .dz-details .dz-size span {
+    padding: 0;
+    background: #fff;
+    border-width: 0 !important;
+    border-radius: 0;
+}
+
+.modalfree.dropzone-container .dz-preview .dz-details .dz-filename span,
+.modalfree.dropzone-container .dz-preview .dz-details .dz-size span {
+    background: none;
+}
+
+.dz-preview .dz-details .dz-size {
+    float: right;
+    margin: 0 0 0 5px;
+    font-size: 13px;
+}
+
+.dz-preview .dz-details .dz-size strong {
+    font-weight: 600;
+}
+
+.dz-preview .dz-details .icon {
+    float: left;
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+.dz-preview .dz-details .dz-filename {
+    float: left;
+    width: 255px;
+    max-width: 65%;
+    color: #2d7bd2;
+    cursor: default;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.modalfree.dropzone-container .dz-preview .dz-details .dz-filename {
+    color: #2d7bd2;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.dz-preview .dz-details .dz-filename .tooltip {
+    left: 20px !important;
+}
+
+.dz-preview .dz-error-message {
+    float: left;
+    width: 100%;
+    padding-left: 56.5%;
+    color: #aa4641;
+    font-size: 11px;
+}
+
+.modalfree.dropzone-container .dz-preview .dz-error-message {
+    color: #ff8219;
+}
+
+.dz-preview .dz-success-mark,
+.dz-preview .dz-error-mark {
+    display: none;
+}
+
+.dz-preview .dz-progress {
+    position: relative;
+    z-index: auto;
+    top: auto;
+    left: auto;
+    float: left;
+    width: 25%;
+    height: 7px;
+    margin: 7px 5px 0 10px;
+    background: #cdcdcd;
+    border-radius: 0;
+}
+
+.modalfree.dropzone-container .dz-preview .dz-progress {
+    background: #cdcdcd;
+}
+
+.dz-preview .dz-progress .dz-upload {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background: #3cc8aa;
+    -webkit-transition: width 300ms ease-in-out;
+    -o-transition: width 300ms ease-in-out;
+    transition: width 300ms ease-in-out;
+}
+
+.modalfree.dropzone-container .dz-preview .dz-progress .dz-upload {
+    background: #3cc8aa;
+}
+
+.dz-preview.dz-processing .dz-progress .dz-upload {
+    opacity: 1;
+}
+
+.dz-preview.dz-complete .dz-progress .dz-upload {
+    opacity: 0;
+    -webkit-transition: opacity 0.45s ease-in-out;
+    -o-transition: opacity 0.45s ease-in-out;
+    transition: opacity 0.45s ease-in-out;
+}
+
+.dz-preview.dz-processing .dz-progress {
+    opacity: 0.85;
+}
+
+.dz-preview.dz-complete .dz-progress {
+    background: #41a0eb;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
+}
+
+.modalfree.dropzone-container .dz-preview.dz-complete .dz-progress {
+    background: #41a0eb;
+}
+
+.dz-preview.dz-error.dz-complete .dz-progress {
+    background: #f00;
+    opacity: 0.5;
+}
+
+.modalfree.dropzone-container .dz-preview.dz-error.dz-complete .dz-progress {
+    background: #f00;
+    opacity: 0.5;
+}
+
+.dz-preview .dz-remove {
+    position: absolute;
+    top: 0;
+    right: 15%;
+    right: calc(20% - 40px);
+    float: left;
+    width: 20px;
+    height: 20px;
+    color: #000;
+    background: none;
+    font-size: 15.5px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    overflow: hidden;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.45;
+}
+
+.dz-preview .dz-remove:hover,
+.dz-preview .dz-remove:focus,
+.dz-preview .dz-remove:active {
+    color: #000;
+    background: none;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+}
+
+.dz-preview .dz-remove:before {
+    content: '\00D7\0020\0020\0020';
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1299px) {
+    .dz-preview .dz-details .dz-filename {
+        max-width: 60%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .dz-preview .dz-details .dz-filename {
+        max-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    .dz-preview .dz-details .dz-filename {
+        max-width: 50%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .dz-preview .dz-details .dz-filename {
+        max-width: 50%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .dz-preview .dz-details .dz-filename {
+        max-width: 50%;
+    }
+}

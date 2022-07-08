@@ -1,0 +1,146 @@
+p,
+li {
+    font-size: 13px !important;
+}
+
+#documenter_cover p {
+    max-width: 700px;
+}
+
+#documenter_content h3 {
+    padding-bottom: 5px;
+}
+
+#documenter_sidebar #documenter_logo {
+    background-size: 95% auto;
+}
+
+p,
+ul,
+ol {
+    line-height: 1.675em;
+}
+
+#documenter_content p {
+    margin: 0 0 10px 0;
+}
+
+#documenter_content li,
+#documenter_content span {
+    font-size: 13px !important;
+}
+
+#documenter_content ul {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin: 5px 0px 18px 0px;
+    border: 0px;
+    outline: 0px;
+    font-size: 13px;
+    font-family: "Open Sans", Arial, verdana, arial, sans-serif;
+    vertical-align: baseline;
+    line-height: 1.5em;
+    color: rgb(56, 56, 56);
+}
+
+#documenter_content li {
+    margin: 0px 0px 0px 36px;
+    padding: 2px 0px;
+    border: 0px;
+    outline: 0px;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    vertical-align: baseline;
+    list-style: square;
+}
+
+#documenter_content .para-title {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 26px;
+    margin-bottom: 7px;
+    margin-left: 0;
+    display: block;
+}
+
+hr.notop {
+    margin-bottom: 11px;
+}
+
+.danger-para-box {
+    color: #c7254e;
+    background: #f9f2f4;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.success-para-box {
+    color: #009926;
+    background: #f2f2f2;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.img-border {
+    max-width: 700px;
+    padding: 10px;
+    background: #f3f6f8;
+    border-radius: 7px;
+    box-shadow: 3px 3px 7px #e1dede;
+    margin: 7px 0;
+}
+
+.img-border.lg {
+    max-width: 95%;
+}
+
+.img-border.plain {
+    padding: 0 !important;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1299px) {
+    .img-border {
+        max-width: 700px;
+    }
+    .img-border.lg {
+        max-width: 95%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .img-border {
+        max-width: 100%;
+    }
+    .img-border.lg {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    .img-border {
+        max-width: 100%;
+    }
+    .img-border.lg {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .img-border {
+        max-width: 100%;
+    }
+    .img-border.lg {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .img-border {
+        max-width: 100%;
+    }
+    .img-border.lg {
+        max-width: 100%;
+    }
+}
+

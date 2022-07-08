@@ -1,0 +1,1 @@
+@include('partials.tabs.tab-history', ['module' => $task, 'module_name' => 'task', 'module_id' => $task->id])

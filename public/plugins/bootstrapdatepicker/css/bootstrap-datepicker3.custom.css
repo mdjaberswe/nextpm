@@ -1,0 +1,50 @@
+.datepicker {
+    border-radius: 0;
+}
+
+.datepicker table {
+    color: #4e5e6a;
+    font-size: 13px;
+    font-family: "Open Sans", Verdana;
+    text-align: center;
+}
+
+.datepicker table tr td,
+.datepicker table tr th {
+    width: 30px;
+    height: 30px;
+    border: medium none;
+    border-radius: 0;
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.datepicker .datepicker-switch:hover,
+.datepicker .next:hover,
+.datepicker .prev:hover,
+.datepicker tfoot tr th:hover {
+    background: #3a80a5;
+}
+
+.datepicker table tr th {
+    color: #fff;
+    background: #5ea4c9;
+    font-weight: normal;
+    text-align: center;
+}
+
+.datepicker table tr:nth-child(odd) {
+    background: #e8edff;
+}
+
+.datepicker table tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.datepicker table tr:nth-child(odd):hover {
+    background: #fffeee;
+}
+
+.datepicker table tr:nth-child(even):hover {
+    background: #fffeee;
+}

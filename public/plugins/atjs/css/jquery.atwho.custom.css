@@ -1,0 +1,22 @@
+.atwho-view {
+    color: #333;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.atwho-view ul li {
+    color: #333;
+    border-width: 0;
+}
+
+.atwho-view .cur {
+    color: #333;
+    background: #f0f0f0;
+}
+
+.atwho-view strong,
+.atwho-view .cur strong {
+    color: #333;
+}

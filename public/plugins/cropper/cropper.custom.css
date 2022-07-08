@@ -1,0 +1,19 @@
+/* Cropper custom css here */
+.cropper-view-box {
+    outline-color: rgba(51, 153, 255, 0.75);
+    outline: 1px solid rgba(240, 240, 240, 0.75);
+}
+
+.cropper-line {
+    background-color: rgba(240, 240, 240, 0.75);
+}
+
+.cropper-point {
+    background-color: rgba(50, 50, 50, 0.5);
+    border: 1px solid rgba(240, 240, 240, 0.75);
+    opacity: 0.5;
+}
+
+.cropper-point.point-se:before {
+    background-color: rgba(240, 240, 240, 0.75);
+}

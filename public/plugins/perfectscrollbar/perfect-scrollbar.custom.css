@@ -1,0 +1,178 @@
+.perfectscroll .ps__rail-y {
+    width: 7px !important;
+    border-radius: 0 !important;
+}
+
+.perfectscroll .ps__thumb-y {
+    right: 1px !important;
+    width: 5px !important;
+    background-color: rgba(200, 200, 200, 0.9) !important;
+    border-radius: 1px !important;
+}
+
+.perfectscroll .ps__rail-y:hover > .ps__thumb-y,
+.perfectscroll .ps__rail-y:focus > .ps__thumb-y,
+.perfectscroll .ps__rail-y.ps--clicking .ps__thumb-y {
+    width: 5px !important;
+    background-color: #c8c8c8 !important;
+}
+
+.modal .ps__rail-y,
+.select2-results__options .ps__rail-y {
+    width: 7px;
+    border-radius: 0;
+}
+
+.modal .ps__thumb-y {
+    right: 1px;
+    width: 5px;
+    background-color: #000;
+    border-radius: 1px;
+}
+
+.select2-results__options .ps__thumb-y {
+    right: 1px;
+    width: 5px;
+    background-color: #cdcdcd;
+    border-radius: 1px;
+}
+
+.modal .ps__rail-y:hover > .ps__thumb-y,
+.modal .ps__rail-y:focus > .ps__thumb-y,
+.modal .ps__rail-y.ps--clicking .ps__thumb-y,
+.select2-results__options .ps__rail-y:hover > .ps__thumb-y,
+.select2-results__options .ps__rail-y:focus > .ps__thumb-y,
+.select2-results__options .ps__rail-y.ps--clicking .ps__thumb-y {
+    width: 5px;
+    background-color: #c8c8c8;
+}
+
+.select2-results__options.ps .ps__rail-x:hover,
+.select2-results__options.ps .ps__rail-y:hover,
+.select2-results__options.ps .ps__rail-x:focus,
+.select2-results__options.ps .ps__rail-y:focus,
+.select2-results__options.ps .ps__rail-x.ps--clicking,
+.select2-results__options.ps .ps__rail-y.ps--clicking {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.scroll-dropdown .ps__rail-y {
+    width: 7px !important;
+    border-radius: 3px !important;
+}
+
+.scroll-dropdown .ps__thumb-y {
+    right: 1px !important;
+    width: 5px !important;
+    background-color: #fff !important;
+    border-radius: 3px !important;
+}
+
+.scroll-dropdown .ps__rail-y:hover > .ps__thumb-y,
+.scroll-dropdown .ps__rail-y:focus > .ps__thumb-y,
+.scroll-dropdown .ps__rail-y.ps--clicking .ps__thumb-y {
+    width: 5px !important;
+    background-color: #cdcdcd !important;
+}
+
+/**
+ * scroll-box:
+ * --------------
+ * Only horizontal overflow scroll enabled.
+ * But when add .both-xy class then horizontal and vertical scroll enabled.
+ */
+.scroll-box .ps__rail-y {
+    width: 7px !important;
+    border-radius: 0 !important;
+}
+
+.scroll-box .ps__thumb-y {
+    right: 1px !important;
+    width: 5px !important;
+    background-color: #cdcdcd !important;
+    border-radius: 3px !important;
+}
+
+.scroll-box.ps .ps__rail-y:hover > .ps__thumb-y,
+.scroll-box.ps .ps__rail-y:focus > .ps__thumb-y,
+.scroll-box.ps .ps__rail-y.ps--clicking .ps__thumb-y {
+    width: 5px !important;
+    background-color: #c8c8c8 !important;
+}
+
+.scroll-box.ps .ps__rail-y:hover,
+.scroll-box.ps .ps__rail-y:focus,
+.scroll-box.ps .ps__rail-y.ps--clicking {
+    background-color: #c8c8c8 !important;
+    opacity: 0.8;
+}
+
+.scroll-box.only-thumb.ps .ps__rail-y:hover,
+.scroll-box.only-thumb.ps .ps__rail-y:focus,
+.scroll-box.only-thumb.ps .ps__rail-y.ps--clicking {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.scroll-box.ps .ps__rail-x {
+    display: none !important;
+}
+
+.scroll-box.both-xy.ps .ps__rail-x {
+    display: block !important;
+}
+
+/**
+ * scroll-box-x:
+ * --------------
+ * Only horizontal overflow scroll enabled.
+ */
+.scroll-box-x .ps__rail-x,
+.scroll-box .ps__rail-x {
+    height: 7px !important;
+    border-radius: 0 !important;
+}
+
+.scroll-box-x .ps__thumb-x,
+.scroll-box .ps__thumb-x {
+    bottom: 1px !important;
+    height: 5px !important;
+    background-color: #cdcdcd !important;
+    border-radius: 3px !important;
+}
+
+.scroll-box-x.ps .ps__rail-x:hover > .ps__thumb-x,
+.scroll-box-x.ps .ps__rail-x:focus > .ps__thumb-x,
+.scroll-box-x.ps .ps__rail-x.ps--clicking .ps__thumb-x,
+.scroll-box.ps .ps__rail-x:hover > .ps__thumb-x,
+.scroll-box.ps .ps__rail-x:focus > .ps__thumb-x,
+.scroll-box.ps .ps__rail-x.ps--clicking .ps__thumb-x {
+    height: 5px !important;
+    background-color: #c8c8c8 !important;
+}
+
+.scroll-box-x.ps .ps__rail-x:hover,
+.scroll-box-x.ps .ps__rail-x:focus,
+.scroll-box-x.ps .ps__rail-x.ps--clicking,
+.scroll-box.ps .ps__rail-x:hover,
+.scroll-box.ps .ps__rail-x:focus,
+.scroll-box.ps .ps__rail-x.ps--clicking {
+    background-color: #c8c8c8 !important;
+    opacity: 0.8;
+}
+
+.scroll-box-x.only-thumb.ps .ps__rail-x:hover,
+.scroll-box-x.only-thumb.ps .ps__rail-x:focus,
+.scroll-box-x.only-thumb.ps .ps__rail-x.ps--clicking,
+.scroll-box.only-thumb.ps .ps__rail-x:hover,
+.scroll-box.only-thumb.ps .ps__rail-x:focus,
+.scroll-box.only-thumb.ps .ps__rail-x.ps--clicking {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.scroll-box-x.ps .ps__rail-y {
+    display: none !important;
+}
+
+.scroll-box-x.ps .scroll-box.ps .ps__rail-y {
+    display: block !important;
+}

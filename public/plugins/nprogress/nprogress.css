@@ -1,0 +1,78 @@
+/* Make clicks pass-through */
+#nprogress {
+    pointer-events: none;
+}
+
+#nprogress .bar {
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 123, 123, 1);
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(255, 123, 123, 1), 0 0 5px rgba(255, 123, 123, 1);
+    opacity: 1.0;
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+        -ms-transform: rotate(3deg) translate(0px, -4px);
+            transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+    position: fixed;
+    z-index: 1031;
+    top: 93%;
+    right: 10px;
+    display: block;
+    display: none;
+}
+
+#nprogress .spinner-icon {
+    width: 20px;
+    height: 20px;
+    border: solid 2px transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+            animation: nprogress-spinner 400ms linear infinite;
+    border-top-color: rgba(255, 123, 123, 1);
+    border-left-color: rgba(255, 123, 123, 1);
+}
+
+.nprogress-custom-parent {
+    position: relative;
+    overflow: hidden;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+    position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes nprogress-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

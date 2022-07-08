@@ -1,0 +1,620 @@
+.gantt {
+    position: relative;
+    width: 97%;
+    margin: 20px 1.5%;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.gantt:after {
+    clear: both;
+    display: block;
+    height: 0;
+    content: ".";
+    visibility: hidden;
+}
+
+.fn-gantt {
+    width: 100%;
+}
+
+.fn-gantt *,
+.fn-gantt *:after,
+.fn-gantt *:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.fn-gantt .fn-content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fn-gantt .row {
+    float: left;
+    height: 24px;
+    margin: 0;
+    line-height: 24px;
+}
+
+/* === LEFT PANEL === */
+.fn-gantt .leftPanel {
+    position: relative;
+    z-index: 20;
+    float: left;
+    width: 34%;
+    border-top: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.175);
+    overflow: hidden;
+}
+
+.fn-gantt .leftPanel .fn-label {
+    display: inline-block;
+    width: 90%;
+    margin: 0 0 0 5px;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+}
+
+.fn-gantt .leftPanel .fn-label .icon {
+    margin-right: 5px;
+    color: rgba(51, 51, 51, 0.175);
+    font-size: 14px;
+}
+
+.fn-gantt .leftPanel .fn-label .icon.icon-sm {
+    font-size: 12px;
+}
+
+.fn-gantt .leftPanel .fn-label.issue.done-0 .icon.icon-issue {
+    color: #ff3700;
+}
+
+.fn-gantt .leftPanel .fn-label.task .icon.icon-task {
+    color: #55c3c3;
+}
+
+.fn-gantt .leftPanel .fn-label.task.done-100 .icon.icon-task {
+    color: rgba(51, 51, 51, 0.175);
+}
+
+.fn-gantt .leftPanel .fn-label.milestone .icon.icon-milestone {
+    color: rgba(51, 51, 51, 0.175);
+}
+
+.fn-gantt .leftPanel .fn-label.milestone.done-100 .icon.icon-milestone {
+    color: rgba(51, 51, 51, 0.175);
+}
+
+.fn-gantt .leftPanel .fn-label.milestone .icon.icon-milestone-period {
+    color: rgba(51, 51, 51, 0.175);
+    text-shadow: none;
+}
+
+.fn-gantt .leftPanel .fn-label.milestone.done-100 .icon.icon-milestone-period {
+    color: rgba(51, 51, 51, 0.175);
+}
+
+.fn-gantt .leftPanel .row {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.fn-gantt .leftPanel .name,
+.fn-gantt .leftPanel .desc {
+    float: left;
+    width: 50%;
+    height: 24px;
+    background-color: #fff;
+}
+
+.fn-gantt .leftPanel .name {
+    font-weight: 600;
+}
+
+/* Add left panel name label css
+.fn-gantt .leftPanel .name .fn-label {}
+*/
+
+.fn-gantt .leftPanel .name .fn-label.plain {
+    font-weight: 400;
+}
+
+.fn-gantt .leftPanel .fn-wide,
+.fn-gantt .leftPanel .fn-wide .fn-label {
+    width: 100%;
+}
+
+.fn-gantt .leftPanel .spacer {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #fff;
+}
+
+.fn-gantt .leftPanel .spacer h3 {
+    margin: 5px 0 7.5px 0;
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 32.5px;
+    text-align: center;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+}
+
+/* === RIGHT PANEL === */
+.fn-gantt .rightPanel {
+    position: relative;
+    border-top: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    overflow: hidden;
+}
+
+.fn-gantt .dataPanel {
+    position: relative;
+    margin-left: 0;
+    outline: 0 solid #f0f0f0;
+    /* TODO: Replace image with gradient?
+    background-size: 24px 24px;
+    background-image: linear-gradient(to left, rgba(221, 221, 221, 0.7) 1px, transparent 1px), linear-gradient(to top, rgba(221, 221, 221, 0.7) 1px, transparent 1px);
+    */
+    background-image: url(../img/grid.png);
+    background-repeat: repeat;
+}
+
+.fn-gantt .row.header {
+    width: 100%;
+    margin-right: -1px;
+}
+
+.fn-gantt .day,
+.fn-gantt .date {
+    width: 24px;
+    color: #333;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 11px;
+    line-height: 24px;
+    text-align: center;
+    overflow: visible;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.fn-gantt .sa,
+.fn-gantt .sn,
+.fn-gantt .wd {
+    height: 24px;
+    text-align: center;
+}
+
+.fn-gantt .sa,
+.fn-gantt .sn {
+    color: #939496;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.fn-gantt .wd {
+    background-color: #fff;
+    text-align: center;
+}
+
+.fn-gantt .holiday {
+    height: 24px;
+    background-color: #ffd263;
+}
+
+.fn-gantt .today {
+    height: 24px;
+    background-color: #fff8da;
+    font-weight: 600;
+    text-align: center;
+}
+
+.fn-gantt .rightPanel .month,
+.fn-gantt .rightPanel .year {
+    float: left;
+    height: 24px;
+    color: #333;
+    background-color: #fff;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    overflow: hidden;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.fn-gantt-hint {
+    position: absolute;
+    z-index: 11;
+    display: none;
+    padding: 5px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 0 solid rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.fn-gantt .bar {
+    position: absolute;
+    z-index: 10;
+    height: 18px;
+    margin: 0 3px 3px 0;
+    background-color: rgba(85, 195, 195, 0.35);
+    border: 1px solid #55c3c3;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.25) inset;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fn-gantt .bar.issue {
+    background-color: #ff3700;
+    border: 1px solid #ff3700;
+}
+
+.fn-gantt .bar.issue.progress.progress-100 {
+    background-color: #ff9696;
+    border: 1px solid #ff9696;
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
+}
+
+.fn-gantt .bar.issue.progress.progress-100 .fn-label {
+    width: 100%;
+    background-color: #ff9696;
+    border-radius: 0;
+}
+
+.fn-gantt .bar.milestone {
+    height: 10px;
+    background-color: #d2d2d2;
+    border: 0 solid #d2d2d2;
+    border-radius: 0;
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
+    overflow: visible;
+}
+
+.fn-gantt .bar.milestone:before,
+.fn-gantt .bar.milestone:after {
+    position: absolute;
+    top: 2px;
+    color: #d2d2d2 !important;
+    font-family: "Material Design Icons";
+    content: "\FB66";
+}
+
+.fn-gantt .bar.milestone:before {
+    left: -1px;
+    color: #8f8f8f !important;
+}
+
+.fn-gantt .bar.milestone:after {
+    right: -1px;
+    color: #d2d2d2 !important;
+}
+
+.fn-gantt .bar.milestone.progress.progress-0:before {
+    color: #d2d2d2 !important;
+}
+
+.fn-gantt .bar.milestone.progress.progress-100:after {
+    color: #8f8f8f !important;
+}
+
+.fn-gantt .bar.milestone.progress .fn-label {
+    height: 10px;
+    color: rgba(255, 255, 255, 0) !important;
+    background: #8f8f8f;
+    border-radius: 0;
+    text-shadow: none;
+}
+
+.fn-gantt .bar .fn-label {
+    width: 100%;
+    color: #414B57  !important;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.fn-gantt .bar.progress .fn-label {
+    color: #fff !important;
+    background: #55c3c3;
+    border-radius: 0 10px 10px 0;
+    text-shadow: none;
+}
+
+.fn-gantt .bar.progress.progress-0 .fn-label {
+    width: 0;
+}
+
+.fn-gantt .bar.progress.progress-10 .fn-label {
+    width: 10%;
+}
+
+.fn-gantt .bar.progress.progress-20 .fn-label {
+    width: 20%;
+}
+
+.fn-gantt .bar.progress.progress-30 .fn-label {
+    width: 30%;
+}
+
+.fn-gantt .bar.progress.progress-40 .fn-label {
+    width: 40%;
+}
+
+.fn-gantt .bar.progress.progress-50 .fn-label {
+    width: 50%;
+}
+
+.fn-gantt .bar.progress.progress-60 .fn-label {
+    width: 60%;
+}
+
+.fn-gantt .bar.progress.progress-70 .fn-label {
+    width: 70%;
+}
+
+.fn-gantt .bar.progress.progress-80 .fn-label {
+    width: 80%;
+}
+
+.fn-gantt .bar.progress.progress-90 .fn-label {
+    width: 90%;
+}
+
+.fn-gantt .bar.progress.progress-100 .fn-label {
+    width: 100%;
+    border-radius: 0;
+}
+
+.fn-gantt .ganttRed {
+    background-color: #F9C4E1;
+}
+
+.fn-gantt .ganttRed .fn-label {
+    color: #78436D  !important;
+}
+
+.fn-gantt .ganttGreen {
+    background-color: #D8EDA3;
+}
+
+.fn-gantt .ganttGreen .fn-label {
+    color: #778461  !important;
+}
+
+.fn-gantt .ganttOrange {
+    background-color: #FCD29A;
+}
+
+.fn-gantt .ganttOrange .fn-label {
+    color: #714715  !important;
+}
+
+/* === BOTTOM NAVIGATION === */
+.fn-gantt .bottom {
+    clear: both;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.fn-gantt .navigate {
+    padding: 10px 0;
+    border-top: 1px solid rgba(240, 240, 240, 0);
+}
+
+.fn-gantt .navigate .nav-slider {
+    display: inline-block;
+    height: 20px;
+}
+
+.fn-gantt .navigate .nav-slider-left,
+.fn-gantt .navigate .nav-slider-right {
+    display: inline-block;
+    height: 20px;
+    text-align: center;
+}
+
+.fn-gantt .navigate .nav-slider-left {
+    float: left;
+}
+
+.fn-gantt .navigate .nav-slider-right {
+    float: right;
+}
+
+.fn-gantt .navigate .nav-slider-content {
+    display: inline-block;
+    width: 85px;
+    height: 20px;
+    margin: 0 10px;
+    text-align: left;
+}
+
+.fn-gantt .navigate .nav-slider-bar,
+.fn-gantt .navigate .nav-slider-button {
+    position: absolute;
+    display: block;
+}
+
+.fn-gantt .navigate .nav-slider-bar {
+    width: 80px;
+    height: 6px;
+    margin: 8px 0 0 0;
+    background-color: #e1e1e1;
+    border-radius: 3px;
+}
+
+.fn-gantt .navigate .nav-slider-button {
+    position: relative;
+    top: -3px;
+    width: 12px;
+    height: 12px;
+    margin-left: -5px;
+    background: #1e559b;
+    border-radius: 20px;
+    -webkit-box-shadow: 1px 1px 5px rgba(85, 85, 85, 0.45);
+    box-shadow: 1px 1px 5px rgba(85, 85, 85, 0.45);
+    cursor: pointer;
+}
+
+.fn-gantt .navigate .page-number {
+    display: inline-block;
+    height: 20px;
+    font-size: 10px;
+}
+
+.fn-gantt .navigate .page-number span {
+    display: inline-block;
+    height: 20px;
+    margin: 0 6px;
+    color: #696969;
+    line-height: 20px;
+}
+
+.fn-gantt .navigate a:link,
+.fn-gantt .navigate a:visited,
+.fn-gantt .navigate a:active {
+    text-decoration: none;
+}
+
+.fn-gantt .nav-link {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 3px 0 0;
+    padding: 0;
+    color: rgba(150, 150, 150, 0) !important;
+    background: #eaeaea !important;
+    border: 1px solid rgba(221, 221, 221, 0.75);
+    border-radius: 2px;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+/* Add css when nav link active
+.fn-gantt .nav-link:active {}
+*/
+
+.fn-gantt .nav-link:before {
+    margin-left: 2px;
+    color: #828282 !important;
+    font-family: "Material Design Icons";
+}
+
+.fn-gantt .navigate .nav-page-back:before {
+    content: "\F736";
+}
+
+.fn-gantt .navigate .nav-page-next:before {
+    content: "\F72D";
+}
+
+.fn-gantt .navigate .nav-slider .nav-page-next {
+    margin-right: 5px;
+}
+
+.fn-gantt .navigate .nav-begin:before {
+    content: "\F792";
+}
+
+.fn-gantt .navigate .nav-prev-week:before {
+    content: "\F13D";
+}
+
+.fn-gantt .navigate .nav-prev-day:before {
+    content: "\F730";
+}
+
+.fn-gantt .navigate .nav-next-day:before {
+    content: "\F733";
+}
+
+.fn-gantt .navigate .nav-next-week:before {
+    content: "\F13E";
+}
+
+.fn-gantt .navigate .nav-end:before {
+    content: "\F793";
+}
+
+.fn-gantt .navigate .nav-zoomOut:before {
+    font-size: 15px;
+    line-height: 19px;
+    content: "\F374";
+}
+
+.fn-gantt .navigate .nav-zoomIn:before {
+    font-size: 15px;
+    line-height: 19px;
+    content: "\F415";
+}
+
+.fn-gantt .navigate .nav-now:before {
+    content: "\F150";
+}
+
+.fn-gantt .navigate .nav-slider .nav-now {
+    margin-right: 5px;
+}
+
+.fn-gantt-loader {
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: wait;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#bf000000", endColorstr="#bf000000", GradientType=0);
+}
+
+.fn-gantt-loader-spinner span {
+    position: absolute;
+    z-index: 9999;
+    top: 45%;
+    left: 48.5%;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid #05aaf5;
+    border-right: 2px solid rgba(230, 230, 230, 0.5);
+    border-bottom: 2px solid rgba(230, 230, 230, 0.5);
+    border-left: 2px solid rgba(230, 230, 230, 0.5);
+    border-radius: 50%;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: ring 0.75s infinite linear;
+    animation: ring 0.75s infinite linear;
+}
+
+.row:after {
+    clear: both;
+}

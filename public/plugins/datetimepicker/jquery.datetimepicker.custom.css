@@ -1,0 +1,28 @@
+.xdsoft_datetimepicker {
+    font-family: "Open Sans", Verdana;
+}
+
+.xdsoft_datetimepicker .xdsoft_label {
+    font-weight: 600;
+}
+
+.xdsoft_scrollbar {
+    width: 5px;
+    border-radius: 2px;
+}
+
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current {
+    color: #666;
+    background: #f5f5f5;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: normal;
+}
+
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current + div {
+    color: #fff;
+    background: #3af;
+    -webkit-box-shadow: #178fe5 0 1px 3px 0 inset;
+    box-shadow: #178fe5 0 1px 3px 0 inset;
+    font-weight: 700;
+}

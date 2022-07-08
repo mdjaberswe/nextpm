@@ -1,0 +1,93 @@
+.pretty.info input:checked + label i::before {
+    background-color: #00aaf5 !important;
+}
+
+.pretty.info input:checked + label i::after {
+    background-color: #00aaf5 !important;
+    border-color: #00aaf5;
+}
+
+.pretty.success input:checked + label i::before {
+    background-color: #00be83 !important;
+}
+
+.pretty.success input:checked + label i::after {
+    background-color: #00be83 !important;
+    border-color: #00be83;
+}
+
+.dataTables_wrapper .pretty {
+    margin: 0;
+}
+
+.dataTable td.center.all .pretty > input[type="checkbox"][disabled] + label,
+.dataTable td.center.all .pretty > input[type="radio"][disabled] + label {
+    opacity: 1;
+}
+
+.pretty i:after,
+.pretty span:after {
+    border-radius: 1.5px;
+}
+
+.pretty.m-0 {
+    margin: 0 !important;
+}
+
+.pretty.m-0 label {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.dataTables_wrapper .pretty i:after {
+    border: 1px solid rgba(210, 200, 200, 0.34);
+    border-radius: 2px;
+}
+
+.modal .dataTables_wrapper .pretty i:after {
+    border: 1px solid rgba(185, 185, 185, 0.85);
+    border-radius: 1.5px;
+}
+
+.dataTables_wrapper .pretty:hover i:after {
+    border: 1px solid rgba(210, 200, 200, 0.5);
+}
+
+.pretty.danger label i:before {
+    background-color: rgba(0, 0, 0, 0) !important;
+    background-image: -o-linear-gradient(top left, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.125)) !important;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.125))) !important;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.125)) !important;
+}
+
+.pretty > input[type="checkbox"],
+.pretty > input[type="radio"] {
+    z-index: 2;
+}
+
+.pretty i:before {
+    z-index: 1;
+}
+
+.pretty.single {
+    margin: 0;
+}
+
+.inline-input .pretty {
+    margin: 0 15px 2px 0 !important;
+}
+
+.inline-input.space .pretty {
+    margin: 0 30px 2px 0 !important;
+}
+
+.modal .inline-input.space .pretty {
+    min-width: 65px;
+    margin: 0 20px 2px 0 !important;
+}
+
+.inline-input .pretty.column {
+    min-width: 100px;
+    margin: 0 0 2px 0 !important;
+    padding-right: 10px;
+}
