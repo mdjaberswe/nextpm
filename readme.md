@@ -5,7 +5,7 @@ NextPM is a powerful yet simple project management tool that helps a team to imp
 
 
 ## How to install 🤔
-(1). Simply [download](https://github.com/mdjaberswe/nextpm/archive/master.zip) or clone the repo:
+(1) Simply [download](https://github.com/mdjaberswe/nextpm/archive/master.zip) or clone the repo:
 ```
 git clone https://github.com/mdjaberswe/nextpm.git
 ```
