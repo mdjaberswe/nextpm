@@ -16,7 +16,7 @@ git clone https://github.com/mdjaberswe/nextpm.git
 
 Please check the folder: documentation/
 
-👉 [Learn more about all the functions and features from our documentation](http://github.com/mdjaber.swe/docs/nextpm/).
+👉 [Learn more about all the functions and features from our documentation](https://mdjaberswe.github.io/docs-nextpm/).
 
 ## License
 
